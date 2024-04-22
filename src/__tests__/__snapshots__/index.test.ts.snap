@@ -1,0 +1,63 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`code-tabs plugin > injects imports when necessary 1`] = `
+"<script lang="ts">import Tabs from '$lib/Tabs.svelte';
+    import {login} from 'another-package'
+
+    let letTheVarBeHere = ''
+</script>
+
+
+<h1>this will do nothing</h1>
+<Tabs groupId={"default"}>
+<Tab value={"js"} label={undefined}>
+<pre class="language-js">{@html \`<code class="language-js">example code</code>\`}</pre>
+</Tab>
+<Tab value={"ts"} label={undefined}>
+<pre class="language-ts">{@html \`<code class="language-ts">example too</code>\`}</pre>
+</Tab>
+</Tabs>
+<Button onClick={login} bind:something={lettheVarBeHere} />
+"
+`;
+
+exports[`code-tabs plugin > lets you import custom component manually 1`] = `
+"
+<script>import Tabs from '$lib/Tabs.svelte';
+    import Tabs from '$lib/letmebe.svelte'
+</script>
+<Tabs groupId={"default"}>
+<Tab value={"js"} label={undefined}>
+<pre class="language-js">{@html \`<code class="language-js">    <span class="token keyword">this</span> will have the custom tabs that you had</code>\`}</pre>
+</Tab>
+<Tab value={"ts"} label={undefined}>
+<pre class="language-ts">{@html \`<code class="language-ts">test</code>\`}</pre>
+</Tab>
+</Tabs>
+"
+`;
+
+exports[`code-tabs plugin > works on groups 1`] = `
+"<script>import Tabs from '$lib/Tabs.svelte'</script>
+
+
+<p>Some snippets</p>
+<Tabs groupId={"group"}>
+<Tab value={"js"} label={undefined}>
+<pre class="language-js">{@html \`<code class="language-js">jsvalue<span class="token punctuation">;</span></code>\`}</pre>
+</Tab>
+<Tab value={"ts"} label={undefined}>
+<pre class="language-ts">{@html \`<code class="language-ts">tsvalue<span class="token punctuation">;</span></code>\`}</pre>
+</Tab>
+</Tabs>
+<p>And a paragraph and another tabs group</p>
+<Tabs groupId={"group"}>
+<Tab value={"yml"} label={undefined}>
+<pre class="language-yml">{@html \`<code class="language-yml">jsvalue</code>\`}</pre>
+</Tab>
+<Tab value={"cs"} label={undefined}>
+<pre class="language-cs">{@html \`<code class="language-cs">tsvalue</code>\`}</pre>
+</Tab>
+</Tabs>
+"
+`;
