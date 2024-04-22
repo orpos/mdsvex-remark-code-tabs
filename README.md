@@ -1,15 +1,55 @@
-# remark_coblocx
+# mdsvex-remark-code-extras
 
-To install dependencies:
+_It is still in beta_
 
-```bash
-bun install
+<br>
+A remark plugin inspired by [@rise4fun/docusaurus-remark-plugin-code-tabs](https://www.npmjs.com/package/@rise4fun/docusaurus-remark-plugin-code-tabs) that automatically imports and manages the code tabs
+
+---
+
+## Configurating:
+
+```js
+// mdsvex.config.js:
+import codeTabs from "mdsvex-remark-code-extras";
+
+export default {
+    remarkPlugins: [
+        [
+            codeTabs,
+            {
+                components: {
+                    Tab: "$lib/Tab.svelte",
+                    Tabs: "$lib/Tabs.svelte",
+                },
+            },
+        ],
+    ],
+};
 ```
 
-To run:
+---
 
-```bash
-bun run index.js
+example:
+
+```
+\`\`\`js tabs=test
+// js Code
+\`\`\`
+\`\`\`ts tabs=test
+// ts Code
+\`\`\`
 ```
 
-This project was created using `bun init` in bun v1.1.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+turns into svelte code
+
+```html
+<script>
+    import Tabs from "$lib/Tabs.svelte";
+    import Tab from "$lib/Tab.svelte";
+</script>
+<Tabs single={false} defaultValue="js">
+    <Tab value="js">[...code]</Tab>
+    <Tab value="ts">[...code]</Tab>
+</Tabs>
+```

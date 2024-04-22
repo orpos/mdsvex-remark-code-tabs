@@ -1,0 +1,15 @@
+.tsbuildinfo*
+tsconfig*
+__tests__
+/src
+/node_modules
+.env
+.DS_Store
+tsconfig.json
+__old__
+.vscode
+.prettierrc
+bun.lockb
+concept.md
+*Tsconfig.json
+vitest.config.js
