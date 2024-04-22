@@ -1,13 +1,16 @@
 {
   "name": "mdsvex-remark-code-extras",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A remark plugin that handles code tabbing",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
 
   "scripts": {
     "test": "vitest run",
     "build": "tsc"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "url": "https://github.com/orpos/mdsvex-remark-code-tabs"
   },
