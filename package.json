@@ -1,6 +1,6 @@
 {
   "name": "mdsvex-remark-code-extras",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A remark plugin that handles code tabbing",
   "main": "./dist/index.js",
 

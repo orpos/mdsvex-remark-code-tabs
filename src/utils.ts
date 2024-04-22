@@ -29,9 +29,6 @@ export function toAttributeValue(s: string | undefined) {
 export function toParameters(params: [string, any][]) {
     return params
         .map(([key, value]) => {
-            if (key == "single") {
-                console.log(value)
-            }
             if (value === "" || (typeof value === "boolean" && value==true))
                 return `${key}`;
             return `${key}={${JSON.stringify(value)}}`;
