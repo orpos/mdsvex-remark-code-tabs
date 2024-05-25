@@ -30,12 +30,12 @@ export default {
 example:
 
 ```
-\`\`\`js tabs=test
+```js tabs=test
 // js Code
-\`\`\`
-\`\`\`ts tabs=test
+``
+```ts tabs=test
 // ts Code
-\`\`\`
+``
 ```
 
 turns into svelte code
