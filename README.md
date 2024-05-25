@@ -1,7 +1,4 @@
 # mdsvex-remark-code-extras
-
-_It is still in beta_
-
 <br>
 A remark plugin inspired by [@rise4fun/docusaurus-remark-plugin-code-tabs](https://www.npmjs.com/package/@rise4fun/docusaurus-remark-plugin-code-tabs) that automatically imports and manages the code tabs
 
