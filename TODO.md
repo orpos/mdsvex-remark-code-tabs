@@ -1,6 +1,6 @@
 - [x] Make the base Plugin work
 - [ ] Leave the old version
-- [ ] Publish the package
+- [x] Publish the package
 - [ ] Fix the error that the code tab evaporates when not in tabs
 - [ ] Fix use in already imported on script tags
 - [ ] Have a better way to orchestrate the overall plugin
